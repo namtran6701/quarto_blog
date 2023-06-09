@@ -1,0 +1,24 @@
+project:
+  type: website
+
+website:
+  title: "My Blog"
+  navbar:
+    backgroun: "red"
+    left: 
+      - "Nam Tran"
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/namtran6701
+      - icon: linkedin
+        href: https://www.linkedin.com/in/namtran6701/
+format:
+  html:
+    theme: 
+      light: litera
+      dark: darkly
+    css: styles.css
+
+editor: visual
+

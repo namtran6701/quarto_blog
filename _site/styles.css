@@ -1,0 +1,7 @@
+/* css styles */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+h1.title {
+  font-family: 'Open Sans', sans-serif;;
+  font-size: 30px;
+}
