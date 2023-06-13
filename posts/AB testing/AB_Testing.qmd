@@ -7,7 +7,7 @@ categories: [concepts]
 
 # A/B Testing
 
-![](images/Screenshot 2023-06-13 015125.png){fig-align="center"}
+![](images/Screenshot%202023-06-13%20015125.png){fig-align="center"}
 
 ## 1. [Introduction]{.underline}
 
