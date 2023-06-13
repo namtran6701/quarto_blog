@@ -2,8 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/AB testing/AB_Testing.html",
       "/posts/my_first_blog/first_blog.html",
-      "/posts/nm/nm.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"
     ]

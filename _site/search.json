@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Library",
     "section": "",
-    "text": "Support Vector Machine\n\n\n\n\n\n\n\nr\n\n\npython\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nJun 9, 2023\n\n\nNam Tran\n\n\n\n\n\n\n  \n\n\n\n\nNam and May\n\n\n\n\n\n\n\n\n\n\n\n\nJun 9, 2023\n\n\nNam Tran\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2023\n\n\nNam Tran\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJun 5, 2023\n\n\nNam Tran\n\n\n\n\n\n\nNo matching items"
+    "text": "A/B Testing\n\n\n\n\n\n\n\nconcepts\n\n\n\n\n\n\n\n\n\n\n\nJun 13, 2023\n\n\nNam Tran\n\n\n\n\n\n\n  \n\n\n\n\nSupport Vector Machine\n\n\n\n\n\n\n\nr\n\n\npython\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nJun 9, 2023\n\n\nNam Tran\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2023\n\n\nNam Tran\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJun 5, 2023\n\n\nNam Tran\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -33,5 +33,54 @@
     "title": "Nam and May",
     "section": "",
     "text": "I love you gau gauuuuuu"
+  },
+  {
+    "objectID": "posts/my_first_blog/first_blog.html",
+    "href": "posts/my_first_blog/first_blog.html",
+    "title": "Support Vector Machine",
+    "section": "",
+    "text": "Support Vector Machine"
+  },
+  {
+    "objectID": "posts/AB testing/AB_Testing.html",
+    "href": "posts/AB testing/AB_Testing.html",
+    "title": "A/B Testing",
+    "section": "",
+    "text": "A/B testing is a method of comparing two versions of a webpage, app, or other product to determine which one performs better. It is a way to test changes to your webpage against the current design and determine which one produces better result.\n\n\n\n\n\nHere is how it works:\n\nSplit your audience: the first step in A/B testing is to split your audience into two groups. One group (the “control”) sees the existing version of whatever you’re testing, while the other group (the “variant”) sees the new version.\nRun the test: Both versions are launched at the same time, and data is collected on how users interact with each version. This include metrics like click-through rates, time spent on the page, conversion rates, etc.\nAnalyze the results: Once enough data has been collected, statistical analysis is used to determine which version of the design performed better. The goal is to determine whether any observed differences in behavior between the two groups are statistically significant, meaning they are likely due to the changes in design rather than the random chance.\nImplement the winner: If the new version is found to perform better than the existing one, it can be fully implemented. If not, the existing version remains in place.\n\n\n\n\n\nThese two are the most common statistical tests that are often employed by A/B testing.\n\nT-test:\n\nIf the data is continuous, like load times or time spent on a page, a t-test is typically used. A t-test compares the means of two groups to determine if they are significantly different from each other.\nFor example, a t-test could be used to compare the average load times for pages with 10 results (Control) vs 30 results (Variant). If the p-value is below a certain threshold, then the difference is considered statistically significant.\n\nChi-Squared test:\n\nif the data is categorical, like whether or not a user clicked on a result, a chi0squared test is typically used. A chi-squared test compares the observed frequencies of different categories to the frequencies that would be expected if there was no effect.\nLet’s consider an example from an e-commerce website. Suppose the company is testing a new design of their product page to see if it improves the conversion rate. The conversion rate is a categorical variable because a user either makes a purchase or not. If the p-value is below a certain threshold, then the difference is consider statistically significant, and the company could conclude that the new design improves the conversion rate.\n\n\n\n\n\n\nNo collecting enough data.\nNot running the test long enough.\nNot accounting for other factors.\n\n\n\n\n\nIn conclusion, A/B testing is a powerful method for making data-driven decisions in business and beyond. It allows us to move beyond assumptions and intuition to understand what really works best for our users or customers. Whether it’s refining the design of a webpage, optimizing an email campaign, or improving a product feature, A/B testing provides us with the insights needed to make these improvements.\nHowever, it’s important to remember that A/B testing is not a one-size-fits-all solution. It requires careful planning, clear hypotheses, and a sound understanding of statistical significance. When done correctly, A/B testing can lead to significant improvements in user experience and business outcomes.\nAs we continue to move towards a more data-driven world, the importance of A/B testing is only likely to grow. It empowers us to continually learn, adapt, and improve, ensuring we provide the best possible experience for our users. As the saying goes, “In God we trust. All others must bring data.” And A/B testing is an invaluable tool for doing just that."
+  },
+  {
+    "objectID": "posts/AB testing/AB_Testing.html#introduction",
+    "href": "posts/AB testing/AB_Testing.html#introduction",
+    "title": "A/B Testing",
+    "section": "",
+    "text": "A/B testing is a method of comparing two versions of a webpage, app, or other product to determine which one performs better. It is a way to test changes to your webpage against the current design and determine which one produces better result."
+  },
+  {
+    "objectID": "posts/AB testing/AB_Testing.html#the-basics-of-ab-testing",
+    "href": "posts/AB testing/AB_Testing.html#the-basics-of-ab-testing",
+    "title": "A/B Testing",
+    "section": "",
+    "text": "Here is how it works:\n\nSplit your audience: the first step in A/B testing is to split your audience into two groups. One group (the “control”) sees the existing version of whatever you’re testing, while the other group (the “variant”) sees the new version.\nRun the test: Both versions are launched at the same time, and data is collected on how users interact with each version. This include metrics like click-through rates, time spent on the page, conversion rates, etc.\nAnalyze the results: Once enough data has been collected, statistical analysis is used to determine which version of the design performed better. The goal is to determine whether any observed differences in behavior between the two groups are statistically significant, meaning they are likely due to the changes in design rather than the random chance.\nImplement the winner: If the new version is found to perform better than the existing one, it can be fully implemented. If not, the existing version remains in place."
+  },
+  {
+    "objectID": "posts/AB testing/AB_Testing.html#statistical-tests",
+    "href": "posts/AB testing/AB_Testing.html#statistical-tests",
+    "title": "A/B Testing",
+    "section": "",
+    "text": "These two are the most common statistical tests that are often employed by A/B testing.\n\nT-test:\n\nIf the data is continuous, like load times or time spent on a page, a t-test is typically used. A t-test compares the means of two groups to determine if they are significantly different from each other.\nFor example, a t-test could be used to compare the average load times for pages with 10 results (Control) vs 30 results (Variant). If the p-value is below a certain threshold, then the difference is considered statistically significant.\n\nChi-Squared test:\n\nif the data is categorical, like whether or not a user clicked on a result, a chi0squared test is typically used. A chi-squared test compares the observed frequencies of different categories to the frequencies that would be expected if there was no effect.\nLet’s consider an example from an e-commerce website. Suppose the company is testing a new design of their product page to see if it improves the conversion rate. The conversion rate is a categorical variable because a user either makes a purchase or not. If the p-value is below a certain threshold, then the difference is consider statistically significant, and the company could conclude that the new design improves the conversion rate."
+  },
+  {
+    "objectID": "posts/AB testing/AB_Testing.html#common-mistakes",
+    "href": "posts/AB testing/AB_Testing.html#common-mistakes",
+    "title": "A/B Testing",
+    "section": "",
+    "text": "No collecting enough data.\nNot running the test long enough.\nNot accounting for other factors."
+  },
+  {
+    "objectID": "posts/AB testing/AB_Testing.html#conclusion",
+    "href": "posts/AB testing/AB_Testing.html#conclusion",
+    "title": "A/B Testing",
+    "section": "",
+    "text": "In conclusion, A/B testing is a powerful method for making data-driven decisions in business and beyond. It allows us to move beyond assumptions and intuition to understand what really works best for our users or customers. Whether it’s refining the design of a webpage, optimizing an email campaign, or improving a product feature, A/B testing provides us with the insights needed to make these improvements.\nHowever, it’s important to remember that A/B testing is not a one-size-fits-all solution. It requires careful planning, clear hypotheses, and a sound understanding of statistical significance. When done correctly, A/B testing can lead to significant improvements in user experience and business outcomes.\nAs we continue to move towards a more data-driven world, the importance of A/B testing is only likely to grow. It empowers us to continually learn, adapt, and improve, ensuring we provide the best possible experience for our users. As the saying goes, “In God we trust. All others must bring data.” And A/B testing is an invaluable tool for doing just that."
   }
 ]

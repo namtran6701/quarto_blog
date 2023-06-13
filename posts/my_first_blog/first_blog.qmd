@@ -5,3 +5,5 @@ date: "2023-06-09"
 categories: [r, python, code]
 image: "svm.png"
 ---
+
+Support Vector Machine
