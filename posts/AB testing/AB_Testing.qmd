@@ -13,7 +13,7 @@ categories: [concepts]
 
 -   A/B testing is a method of comparing two versions of a webpage, app, or other product to determine which one performs better. It is a way to test changes to your webpage against the current design and determine which one produces better result.
 
-## 2. [The basics of A/B testing]{.underline}
+## 2. [The Basics of A/B Testing]{.underline}
 
 -   Here is how it works:
 
@@ -41,7 +41,7 @@ These two are the most common statistical tests that are often employed by A/B t
 
     -   Let's consider an example from an e-commerce website. Suppose the company is testing a new design of their product page to see if it improves the conversion rate. The conversion rate is a categorical variable because a user either makes a purchase or not. If the p-value is below a certain threshold, then the difference is consider statistically significant, and the company could conclude that the new design improves the conversion rate.
 
-## 4. [Common mistakes]{.underline}
+## 4. [Common Mistakes]{.underline}
 
 -   No collecting enough data.
 
