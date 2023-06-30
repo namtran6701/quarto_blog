@@ -3,7 +3,7 @@ title: "Finance in Python"
 author: "Nam Tran"
 format: html
 date: "06/30/2023"
-categories: [python]
+categories: [python, finance]
 ---
 
 In this blog, I will how to use yfinance library in python to get the stock data and visualize it using plotly library.
