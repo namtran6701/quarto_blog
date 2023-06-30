@@ -26,8 +26,6 @@ pip install yfinance
 Now the package has been downloaded to our local machine, but we still need to import yfinance library in our python code script whenever we need to use it.
 
 ```{python}
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 import yfinance as yf
 ```
 
@@ -64,8 +62,7 @@ One of the most common way to observe a stock data is to use the candlestick cha
 We will be using the graph_objects module from plotly library
 
 ```{python}
-
-
+import plotly.graph_objects as go
 ```
 
 ## What is a candlestick chart?
@@ -109,6 +106,7 @@ If the candlestick chart is too complicated for you, you can also plot the line 
 
 # We need to use the make_subplots module from plotly library to plot multiple plot in one figure.
 
+from plotly.subplots import make_subplots
 
 # Create framework for two plots (2 rows, 1 column)
 fig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.03)
