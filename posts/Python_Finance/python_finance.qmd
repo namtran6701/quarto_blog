@@ -1,0 +1,170 @@
+---
+title: "Finance in Python"
+format: html
+---
+
+
+In this blog, I will how to use yfinance library in python to get the stock data and visualize it using plotly library.
+
+## What is yfinance?
+
+yfinance is a popular open source library in python to get the stock data.
+
+## How to install yfinance?
+
+First, we need to install yfinance library using pip command in the terminal 
+
+```bash
+pip install yfinance
+```
+
+# 1. Get the stock data
+Now the package has been downloaded to our local machine, we need to import yfinance library in our python code script whenever we need to use it.
+
+```{python}
+import yfinance as yf
+```
+
+Now, we can utilize the package to get the stock data. Let's get the stock data of Microsoft (MSFT) from 2022-11-30 (the date that ChatGPT was released) to today. 
+
+```{python}
+msft = yf.download("MSFT", start = '2022-11-30')
+```
+
+Let's take a look at the data.
+
+```{python}
+msft.head(5)
+```
+
+# 2. Visualize the Stock data
+
+To get a better insight of the data, we can plot the data interactively using plotly library. 
+
+## What is Plotly?
+Plotly is also a very popular open source libary in python to visualize the data interactively. 
+
+Again, to get plotly to work, we need to install the library using the pip command and import the library in our python code script.
+
+## How to install plotly?
+One of the most common way to observe a stock data is to use the candlestick chart 
+
+```bash
+pip install plotly
+```
+
+```{python}
+# We will be using the graph_objects module from plotly library
+import plotly.graph_objects as go
+```
+
+```{python}
+import plotly.graph_objects as go
+```
+
+## What is a candlestick chart?
+
+- A candlestick chart is a type of financial chart that shows the price movement of a stock over time. 
+
+- It is a combination of a line-chart and a bar-chart, in that each bar represents the range of price movement over a given time interval. 
+
+- It is most often used in technical analysis of equity and currency price patterns. 
+
+```{python}
+# plot the candlestick chart
+fig = go.Figure(data=[go.Candlestick(x=msft.index,
+                open=msft['Open'],
+                high=msft['High'],
+                low=msft['Low'],
+                close=msft['Close'])])
+# set the layout to be a dark theme
+fig.update_layout(
+    title_text='Microsoft Stock Price', 
+    template='plotly_white', 
+    autosize=False,
+    width=800, 
+    height=500,
+    margin=dict(
+        l=50,  # left margin
+        r=50,  # right margin
+        b=100, # bottom margin
+        t=100, # top margin
+        pad=10
+    ),
+    paper_bgcolor="LightSteelBlue",  # background color
+)
+
+fig.show()
+```
+
+
+If the candlestick chart is too complicated for you, you can also plot the line chart using the adjusted price of the stock 
+
+```{python}
+
+# We need to use the make_subplots module from plotly library to plot multiple plot in one figure. 
+
+from plotly.subplots import make_subplots
+
+# Create framework for two plots (2 rows, 1 column)
+fig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.03)
+
+# Add line plot for adjusted close price (the first row)
+fig.add_trace(go.Scatter(x=msft.index, y=msft['Adj Close'], mode='lines', name='MSFT'), row=1, col=1)
+
+# Add bar plot for volume (the second row)
+fig.add_trace(go.Bar(x=msft.index, y=msft['Volume'], name='Volume', marker_color='red'), row=2, col=1)
+
+# Set layout
+fig.update_layout(height=600, width=800, title_text="MSFT Adjusted Price and Volume", template = 'plotly_white', showlegend= True)
+
+# show plot
+fig.show()
+
+```
+
+# 3. Plot multiple stocks in one plot 
+
+As we analyze the stock market, most likely that we will need to compare the stock price of multiple companies. 
+
+Plotly does allow us to plot multiple stocks in one plot. 
+
+Let's say we want to compare the stock price of Microsoft (MSFT), NVDIA (NVDA), and Google (GOOG) from since the introduction of chatgpt to today. 
+
+First, we need to get the stock data for the two new companies
+
+```{python}
+nvda = yf.download("NVDA", start = '2022-11-30')
+
+goog = yf.download("GOOG", start = "2022-11-30")
+```
+
+Then, we can plot the data using the same method as before. 
+
+```{python}
+
+# Create the framework for three plots
+fig = make_subplots(rows = 3, cols = 1, shared_xaxes = True, vertical_spacing = 0.03)
+
+# add the line plot for MSFT 
+
+fig.add_trace(go.Scatter(x = msft.index, y= msft['Adj Close'], mode = 'lines', name = 'MSFT'), row = 1, col = 1)
+
+# add the line plot for NVDA 
+
+fig.add_trace(go.Scatter(x = nvda.index, y = nvda['Adj Close'], mode = 'lines', name = 'NVDA'), row = 2, col = 1)
+
+# add the line plot for GOOG 
+
+fig.add_trace(go.Scatter(x = goog.index, y = goog['Adj Close'], mode = 'lines', name = 'GOOG'), row = 3, col = 1)
+
+# set the layout
+
+fig.update_layout(height = 800, width = 1000, title_text = "MSFT, NVDA, and GOOG Adjusted Price Since The Introduction of ChatGPT", template = 'plotly_white', showlegend = True)
+
+# show the plot
+fig.show()
+
+```
+
+Quick Conclusion: They all have a similar trend - the stock prices have been increasing since the introduction of ChatGPT. Notably, NVDA has risen more than double ever since. 
