@@ -1,38 +1,45 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/Python_Finance/python_finance.html",
+    "href": "posts/Python_Finance/python_finance.html",
+    "title": "Finance in Python",
     "section": "",
-    "text": "Hello! I’m Nam Tran, and I welcome you to my website.\nI’m an aspiring business analytics professional, born a nd raised in Vietnam. Ever since my introductory course to business analytics, I’ve been deeply passionate about harnessing the power of machine learning and AI to make informed business decisions and derive insights from data. This passion has not only guided my academic pursuits but also shaped my aspirations for the future.\nI recently graduated from the State Universit y of New York at New Paltz with a double major in Business Analytics and Finance. As the next step in my academic journey, I’m heading to North Carolina to pursue a Master’s degree in Business Analytics from Wake Forest University.\nI’m a strong believer in the transformative power of Artificial Intelligence. I envision a future where innovation is driven by the synergy between human and machine intelligence, ultimately leading to a better world. This philosophy is a driving force in my academic endeavors and future career aspirations in the business analytics field.\nWhen I’m not immersed in studying or exploring new AI technologies, you’ll often find me cheering for my favorite soccer club, Arsenal, or out in the great outdoors. I’m a huge fan of active pursuits such as hiking, running, and camping. These hobbies not only provide a counterbalance to my intense academic focus but also offer me a refreshing change of scenery, invigorating my mind and keeping me connected with nature.\nHere on my website, I share insights and ideas about business analytics, machine learning, AI, and my academic journey. I hope to inspire and connect with like-minded individuals or those interested in the transformative potential of business analytics and AI.\nFor inquiries or collaboration, please feel free to contact me at namtran6701@gmail.com.\nThank you for visiting my site. I’m thrilled to share my journey with you and looking forward to the opportunity of working together!"
+    "text": "In this blog, I will how to use yfinance library in python to get the stock data and visualize it using plotly library."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Library",
-    "section": "",
-    "text": "A/B Testing\n\n\n\n\n\n\n\nconcepts\n\n\n\n\n\n\n\n\n\n\n\nJun 13, 2023\n\n\nNam Tran\n\n\n\n\n\n\n  \n\n\n\n\nSupport Vector Machine\n\n\n\n\n\n\n\nr\n\n\npython\n\n\ncode\n\n\n\n\n\n\n\n\n\n\n\nJun 9, 2023\n\n\nNam Tran\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2023\n\n\nNam Tran\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJun 5, 2023\n\n\nNam Tran\n\n\n\n\n\n\nNo matching items"
+    "objectID": "posts/Python_Finance/python_finance.html#what-is-yfinance",
+    "href": "posts/Python_Finance/python_finance.html#what-is-yfinance",
+    "title": "Finance in Python",
+    "section": "What is yfinance?",
+    "text": "What is yfinance?\nyfinance is a popular open source library in python to get the stock data."
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+    "objectID": "posts/Python_Finance/python_finance.html#how-to-install-yfinance",
+    "href": "posts/Python_Finance/python_finance.html#how-to-install-yfinance",
+    "title": "Finance in Python",
+    "section": "How to install yfinance?",
+    "text": "How to install yfinance?\nFirst, we need to install yfinance library using pip command in the terminal\npip install yfinance"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "objectID": "posts/Python_Finance/python_finance.html#what-is-plotly",
+    "href": "posts/Python_Finance/python_finance.html#what-is-plotly",
+    "title": "Finance in Python",
+    "section": "What is Plotly?",
+    "text": "What is Plotly?\nPlotly is also a very popular open source libary in python to visualize the data interactively.\nAgain, to get plotly to work, we need to install the library using the pip command and import the library in our python code script."
   },
   {
-    "objectID": "posts/nm/nm.html",
-    "href": "posts/nm/nm.html",
-    "title": "Nam and May",
-    "section": "",
-    "text": "I love you gau gauuuuuu"
+    "objectID": "posts/Python_Finance/python_finance.html#how-to-install-plotly",
+    "href": "posts/Python_Finance/python_finance.html#how-to-install-plotly",
+    "title": "Finance in Python",
+    "section": "How to install plotly?",
+    "text": "How to install plotly?\nOne of the most common way to observe a stock data is to use the candlestick chart\npip install plotly\nWe will be using the graph_objects module from plotly library"
+  },
+  {
+    "objectID": "posts/Python_Finance/python_finance.html#what-is-a-candlestick-chart",
+    "href": "posts/Python_Finance/python_finance.html#what-is-a-candlestick-chart",
+    "title": "Finance in Python",
+    "section": "What is a candlestick chart?",
+    "text": "What is a candlestick chart?\n\nA candlestick chart is a type of financial chart that shows the price movement of a stock over time.\nIt is a combination of a line-chart and a bar-chart, in that each bar represents the range of price movement over a given time interval.\nIt is most often used in technical analysis of equity and currency price patterns.\n\n\n# plot the candlestick chart\nfig = go.Figure(data=[go.Candlestick(x=msft.index,\n                open=msft['Open'],\n                high=msft['High'],\n                low=msft['Low'],\n                close=msft['Close'])])\n# set the layout to be a dark theme\nfig.update_layout(\n    title_text='Microsoft Stock Price',\n    template='plotly_white',\n    autosize=False,\n    width=800,\n    height=500,\n    margin=dict(\n        l=50,  # left margin\n        r=50,  # right margin\n        b=100,  # bottom margin\n        t=100,  # top margin\n        pad=10\n    ),\n    paper_bgcolor=\"LightSteelBlue\",  # background color\n)\n\nfig.show()\n\n\n                                                \n\n\nIf the candlestick chart is too complicated for you, you can also plot the line chart using the adjusted price of the stock\n\n# We need to use the make_subplots module from plotly library to plot multiple plot in one figure.\n\n\n# Create framework for two plots (2 rows, 1 column)\nfig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.03)\n\n# Add line plot for adjusted close price (the first row)\nfig.add_trace(go.Scatter(\n    x=msft.index, y=msft['Adj Close'], mode='lines', name='MSFT'), row=1, col=1)\n\n# Add bar plot for volume (the second row)\nfig.add_trace(go.Bar(\n    x=msft.index, y=msft['Volume'], name='Volume', marker_color='red'), row=2, col=1)\n\n# Set layout\nfig.update_layout(height=600, width=800, title_text=\"MSFT Adjusted Price and Volume\",\n                  template='plotly_white', showlegend=True)\n\n# show plot\nfig.show()"
   },
   {
     "objectID": "posts/my_first_blog/first_blog.html",
@@ -40,6 +47,13 @@
     "title": "Support Vector Machine",
     "section": "",
     "text": "Support Vector Machine"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hello! I’m Nam Tran, and I welcome you to my website.\nI’m an aspiring business analytics professional, born and raised in Vietnam. Ever since I took the introductory course to business analytics, I’ve been deeply passionate about harnessing the power of machine learning and AI to make informed business decisions and derive insights from data. This passion has not only guided my academic pursuits but also shaped my aspirations for the future.\nI recently graduated from the State Universit y of New York at New Paltz with a double major in Business Analytics and Finance. As the next step in my academic journey, I’m heading to North Carolina to pursue a Master’s degree in Business Analytics from Wake Forest University.\nI’m a strong believer in the transformative power of Artificial Intelligence. I envision a future where innovation is driven by the synergy between human and machine intelligence, ultimately leading to a better world. This philosophy is a driving force in my academic endeavors and future career aspirations in the business analytics field.\nWhen I’m not immersed in studying or exploring new AI technologies, you’ll often find me cheering for my favorite soccer club, Arsenal, or out in the great outdoors. I’m a huge fan of active pursuits such as hiking, running, and camping. These hobbies not only provide a counterbalance to my intense academic focus but also offer me a refreshing change of scenery, invigorating my mind and keeping me connected with nature.\nHere on my website, I share insights and ideas about business analytics, machine learning, AI, and my academic journey. I hope to inspire and connect with like-minded individuals or those interested in the transformative potential of business analytics and AI.\nFor inquiries or collaboration, please feel free to contact me at namtran6701@gmail.com.\nThank you for visiting my site. I’m thrilled to share my journey with you and looking forward to the opportunity of working together!\nFavorite quote: “Sooner or later, the discipline will beat the intelligence.”"
   },
   {
     "objectID": "posts/AB testing/AB_Testing.html",
