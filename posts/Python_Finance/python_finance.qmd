@@ -7,7 +7,7 @@ categories: [python, finance]
 image: "finance.png"
 ---
 
-In this blog, I will how to use yfinance library in python to get the stock data and visualize it using plotly library.
+In this blog, I will show you how to use yfinance library in python to get the stock data and visualize it using plotly library.
 
 ## What is yfinance?
 
@@ -23,11 +23,11 @@ pip install yfinance
 
 # 1. Get the stock data
 
-Now the package has been downloaded to our local machine, we need to import yfinance library in our python code script whenever we need to use it.
+Now the package has been downloaded to our local machine, but we still need to import yfinance library in our python code script whenever we need to use it.
 
 ```{python}
-from plotly.subplots import make_subplots
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 import yfinance as yf
 ```
 
@@ -55,12 +55,18 @@ Again, to get plotly to work, we need to install the library using the pip comma
 
 ## How to install plotly?
 
-One of the most common way to observe a stock data is to use the candlestick chart
-
 ``` bash
 pip install plotly
 ```
+
+One of the most common way to observe a stock data is to use the candlestick chart
+
 We will be using the graph_objects module from plotly library
+
+```{python}
+
+
+```
 
 ## What is a candlestick chart?
 
@@ -77,7 +83,7 @@ fig = go.Figure(data=[go.Candlestick(x=msft.index,
                 high=msft['High'],
                 low=msft['Low'],
                 close=msft['Close'])])
-# set the layout to be a dark theme
+# set the layout to be a LightSteelBlue theme
 fig.update_layout(
     title_text='Microsoft Stock Price',
     template='plotly_white',
@@ -128,7 +134,7 @@ fig.show()
 
 As we analyze the stock market, most likely that we will need to compare the stock price of multiple companies.
 
-Plotly does allow us to plot multiple stocks in one plot.
+Plotly does allow us to plot multiple stocks in one plot with the help of make_subplots module.
 
 Let's say we want to compare the stock price of Microsoft (MSFT), NVDIA (NVDA), and Google (GOOG) from since the introduction of chatgpt to today.
 
@@ -171,5 +177,6 @@ fig.update_layout(height=800, width=1000, title_text="MSFT, NVDA, and GOOG Adjus
 fig.show()
 ```
 
+[**Brief Conclusion:**]{.underline}
 
-Quick Conclusion: They all have a similar trend - the stock prices have been increasing since the introduction of ChatGPT. Notably, NVDA has risen more than double ever since.
+-   They all have a similar trend - the stock prices have been increasing since the introduction of ChatGPT. Notably, NVDA has risen more than double ever since.
