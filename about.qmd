@@ -14,7 +14,7 @@ about:
 
 Hello! I'm Nam Tran, and I welcome you to my website.
 
-I'm an aspiring business analytics professional, born a nd raised in Vietnam. Ever since my introductory course to business analytics, I've been deeply passionate about harnessing the power of machine learning and AI to make informed business decisions and derive insights from data. This passion has not only guided my academic pursuits but also shaped my aspirations for the future.
+I'm an aspiring business analytics professional, born and raised in Vietnam. Ever since I took the introductory course to business analytics, I've been deeply passionate about harnessing the power of machine learning and AI to make informed business decisions and derive insights from data. This passion has not only guided my academic pursuits but also shaped my aspirations for the future.
 
 I recently graduated from the State Universit y of New York at New Paltz with a double major in Business Analytics and Finance. As the next step in my academic journey, I'm heading to North Carolina to pursue a Master's degree in Business Analytics from Wake Forest University.
 
@@ -28,4 +28,4 @@ For inquiries or collaboration, please feel free to contact me at [**namtran6701
 
 Thank you for visiting my site. I'm thrilled to share my journey with you and looking forward to the opportunity of working together!
 
-Favorite Quote: "Sooner or later, the discipline will beat the intelligence."
+Favorite quote: "Sooner or later, the discipline will beat the intelligence."
