@@ -1,0 +1,3 @@
+to publish blog in vscode
+
+get the link to the quarto file. Then open the terminal as admin -> quarto render <"the link"> 

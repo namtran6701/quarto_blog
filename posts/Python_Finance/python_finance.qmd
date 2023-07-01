@@ -132,8 +132,6 @@ fig.show()
 
 As we analyze the stock market, most likely that we will need to compare the stock price of multiple companies.
 
-Plotly does allow us to plot multiple stocks in one plot with the help of make_subplots module.
-
 Let's say we want to compare the stock price of Microsoft (MSFT), NVDIA (NVDA), and Google (GOOG) from since the introduction of chatgpt to today.
 
 First, we need to get the stock data for the two new companies
@@ -151,17 +149,17 @@ Then, we can plot the data using the same method as before.
 # Create the framework for three plots
 fig = make_subplots(rows=3, cols=1, shared_xaxes=True, vertical_spacing=0.03)
 
-# add the line plot for MSFT
+# line plot for MSFT
 
 fig.add_trace(go.Scatter(
     x=msft.index, y=msft['Adj Close'], mode='lines', name='MSFT'), row=1, col=1)
 
-# add the line plot for NVDA
+# line plot for NVDA
 
 fig.add_trace(go.Scatter(
     x=nvda.index, y=nvda['Adj Close'], mode='lines', name='NVDA'), row=2, col=1)
 
-# add the line plot for GOOG
+# line plot for GOOG
 
 fig.add_trace(go.Scatter(
     x=goog.index, y=goog['Adj Close'], mode='lines', name='GOOG'), row=3, col=1)
@@ -173,6 +171,74 @@ fig.update_layout(height=800, width=1000, title_text="MSFT, NVDA, and GOOG Adjus
 
 # show the plot
 fig.show()
+```
+
+We can also include the moving average lines to the plot to get a better insight of the trend of the stock price movement. 
+
+To keep the code clean, we can create a function to plot the figure for the moving average lines
+
+```{python}
+ def sma_trace_fig(data, window, row, color, legend_option = False):
+    return (fig.add_trace(go.Scatter(x = data.index, y = data['Adj Close'].rolling(window = window).mean(), mode = 'lines', name = f'{window}-day SMA', showlegend=legend_option, line=dict(color= color)), row = row, col = 1))
+```
+
+
+
+```{python}
+
+sma_20_col = 'blue'
+
+sma_50_col  = 'brown'
+
+# Create the framework for the three plots
+
+fig = make_subplots(rows = 3, cols = 1, shared_xaxes = True, vertical_spacing = 0.03)
+
+# line plot for MSFT 
+
+fig.add_trace(go.Scatter(x = msft.index, y = msft['Adj Close'], mode = 'lines', name = 'MSFT', line = dict(color = 'black'), showlegend=False), row = 1, col = 1)
+
+# line plot for NVDA
+
+fig.add_trace(go.Scatter(x = nvda.index, y = nvda['Adj Close'], mode = 'lines', name = 'NVDA', showlegend=False), row = 2, col = 1)
+
+# line plot for GOOG
+
+fig.add_trace(go.Scatter(x = goog.index, y = goog['Adj Close'], mode = 'lines', name = 'GOOG', showlegend=False), row = 3, col = 1)
+
+# 20-day moving average lines for MSFT
+
+sma_trace_fig(msft, 20, 1, sma_20_col, legend_option = True)
+
+# 20-day moving average lines for NVDA 
+
+sma_trace_fig(nvda, 20, 2, sma_20_col, legend_option = False)
+
+# 20-day moving average lines for GOOG
+
+sma_trace_fig(goog, 20, 3, sma_20_col, legend_option = False)
+
+# 50-day MA line for MSFT 
+sma_trace_fig(msft, 50, 1, sma_50_col, legend_option = True)
+
+# 50-day MA line for NVDA 
+
+sma_trace_fig(nvda, 50, 2, sma_50_col, legend_option = False)
+
+# 50-day MA for GOOG 
+
+sma_trace_fig(goog, 50, 3, sma_50_col, legend_option = False )
+
+# set the layout
+
+fig.update_layout(height=800, width=1000, title_text="MSFT, NVDA, and GOOG Adjusted Price Since The Introduction of ChatGPT", template='plotly_white')
+
+fig.update_yaxes(title_text="MSFT", row=1, col=1)
+
+fig.update_yaxes(title_text="NVDA", row=2, col=1)
+
+fig.update_yaxes(title_text="GOOG", row=3, col=1)
+
 ```
 
 [**Brief Conclusion:**]{.underline}
